@@ -22,8 +22,8 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
                         'allow' => true,
+                        'actions' => ['login'],
                     ],
                     [
                         'actions' => ['logout', 'index'],
@@ -31,6 +31,9 @@ class SiteController extends Controller
                         'roles' => ['@'],
                     ],
                 ],
+                'denyCallback' => function () {
+                    return Yii::$app->response->redirect(['user/login']);
+                },
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -40,6 +43,7 @@ class SiteController extends Controller
             ],
         ];
     }
+
 
     /**
      * {@inheritdoc}

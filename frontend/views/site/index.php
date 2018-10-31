@@ -2,52 +2,29 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = '';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    <div class="">
+        <img src=" <?= Yii::$app->request->baseUrl?>/css/logoprotur.png" alt="User Image" style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: auto;"/>
     </div>
-
+    <bR>
     <div class="body-content">
+<p align="center">
+        <p align="justify"> <center><strong>Protur 2018</strong> www.protur.cl </center> </p>
+</p>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+<p align="center">
+        <p align="justify">La Asociación Gremial de Turismo y Cultura de la Región del Biobío, Protur Biobío AG, es un organismo que agrupa a los empresarios del rubro, representando los intereses de sus asociados en vías del desarrollo y crecimiento del sector.
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+        Protur Biobío AG, se creó en la ciudad de Talcahuano el seis de junio del año 2014, para aunar esfuerzos entre el sector público y privado, en aras de generar acciones tendientes a potenciar el Turismo como un ciclo virtuoso de valor compartido y sustentabilidad.
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
+        El objeto de la asociación es promover la racionalización, desarrollo y protección de la actividad común que desarrollan los socios, por sí mismo, esto es, el turismo, en especial en la Región del Biobío a fin de que éste se convierta en uno de los principales destinos turísticos sustentables del país, por lo que la misión de la asociación será generar y articular iniciativas tendientes al logro integral de dicho objeto.</p>
+</p>
     </div>
 </div>

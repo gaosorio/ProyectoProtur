@@ -26,19 +26,20 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
                 'rules' => [
                     [
-                        'actions' => ['signup'],
                         'allow' => true,
-                        'roles' => ['?'],
+                        'actions' => ['login'],
                     ],
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'index'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                 ],
+                'denyCallback' => function () {
+                    return Yii::$app->response->redirect(['user/login']);
+                },
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -48,6 +49,7 @@ class SiteController extends Controller
             ],
         ];
     }
+
 
     /**
      * {@inheritdoc}
@@ -75,6 +77,18 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionChange_password()
+    {
+        $user = Yii::$app->user->identity;
+        $loadedPost = $user->load(Yii::$app->request->post());
+        if($loadedPost && $user->validate())
+        {
+
+        }
+        return $this->render('change_password', [
+                'user' => $user,
+            ]);
+    }
     /**
      * Logs in a user.
      *
